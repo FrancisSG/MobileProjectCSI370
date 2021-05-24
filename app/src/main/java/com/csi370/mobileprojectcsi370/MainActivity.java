@@ -3,6 +3,7 @@ package com.csi370.mobileprojectcsi370;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +11,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String BOOLEAN_PREF = "booleanPref";
+
     Button btnLogin, btnRegister, btnGuest;
+
+    boolean toggleButton = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,22 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnGuest = (Button) findViewById(R.id.btnGuest);
+
+
+        loadData();
+
+        try {
+            if(PrefConfig.readListFromSharedPreference(this).isEmpty()){
+                btnLogin.setEnabled(false);
+            } else {
+                btnLogin.setEnabled(true);
+            }
+        }
+            catch(Exception e) {
+                btnLogin.setEnabled(false);
+            }
+
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
+
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        RegisterActivity.hasBeenUsed = sharedPreferences.getBoolean(BOOLEAN_PREF, true);
+        if(RegisterActivity.hasBeenUsed) {
+            toggleButton = true;
+        }
+    }
+
 }
