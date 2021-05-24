@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">MobileProjectCSI370</string>
+    <string name="welcome">Welcome to PcPro</string>
+    <string name="onlyTheBestComputers">Only the best computers</string>
+    <string name="enterEmail">Enter email</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="enterNumber">Enter phone number</string>
+    <string name="enterAddress">Enter your address</string>
+    <!--Button text-->
+    <string name="register">Register</string>
+    <string name="logIn">Login</string>
+    <string name="guest">Enter As Guest</string>
+    <string name="resetPass">Reset</string>
+    <string name="addToCart">Add</string>
+    <string name="removeFromCart">Remove</string>
+    <string name="inspect">Inspect</string>
+    <string name="pickCategory">Category</string>
+    <string name="office">Office</string>
+    <string name="casual">Casual</string>
+    <string name="enthusiast">Enthusiast</string>
+    <string name="checkOut">Check Out</string>
+    <string name="cancelOrder">Cancel</string>
+    <string name="purchase">Purchase</string>
+    <string name="registerText">Don\'t have an account? Register here</string>
+    <string name="forgotPassText">Forgot your password? Reset here</string>
+    <string name="back">Back</string>
+    <!--meta data-->
+    <string name="imgDesc">appIcon</string>
+
 </resources>
