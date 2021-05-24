@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/viciousstancebgcolor"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/edtEmailRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterEmail"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPasswordRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterPassword"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailRegister" />
+
+    <EditText
+        android:id="@+id/edtAddressRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterAddress"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordRegister" />
+
+    <EditText
+        android:id="@+id/edtPhoneNumberRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterNumber"
+        android:inputType="phone"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddressRegister" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="174dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/register"
+        app:backgroundTint="@color/dark1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumberRegister" />
+
+    <Button
+        android:id="@+id/btnBackRegister"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="67dp"
+        android:text="@string/back"
+        app:backgroundTint="@color/dark1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+</androidx.constraintlayout.widget.ConstraintLayout>
