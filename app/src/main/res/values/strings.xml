@@ -4,6 +4,9 @@
     <string name="onlyTheBestComputers">Only the best computers</string>
     <string name="enterEmail">Enter email</string>
     <string name="enterPassword">Enter password</string>
+    <string name="ResetPassword">Reset password</string>
+    <string name="enterNewPassword">Enter New Password</string>
+    <string name="enterNewPasswordAgain">Reenter New Password</string>
     <string name="enterNumber">Enter phone number</string>
     <string name="enterAddress">Enter your address</string>
     <!--Button text-->
