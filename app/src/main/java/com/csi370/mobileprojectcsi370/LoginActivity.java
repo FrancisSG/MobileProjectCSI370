@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,22 +28,31 @@ public class LoginActivity extends AppCompatActivity {
         btnReset = (Button) findViewById(R.id.btnResetLogin);
         btnBack = (Button) findViewById(R.id.btnBackLogin);
 
+        // For sharedPreference - DO NOT REMOVE YET
+        //Keep sharePreference updated with AppUserDb
+//        if(!AppUserDb.UsersArrayList.isEmpty()) {
+//            AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
+//        }
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if(!TextUtils.isEmpty(edtEmail.getText().toString()) && !TextUtils.isEmpty(edtPassword.getText().toString())){
 
-                if(checkIfEmailExists()){
+                    if(true){
 
-                   if(authenticateUser()){
-                       Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
+                        if(authenticateUser()){
+                            Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
 
-                       Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-                       startActivity(mainActivity);
-                       finish();
-                   } else {
-                       Toast.makeText(getApplicationContext(), "Incorrect password!", Toast.LENGTH_SHORT).show();
-                   }
-                } else {
-                    Toast.makeText(getApplicationContext(), "User doesn't exist! Go back to register", Toast.LENGTH_SHORT).show();
+                            Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(mainActivity);
+                            finish();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Incorrect password!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "User doesn't exist! Go back to register", Toast.LENGTH_SHORT).show();
+
+                    }
 
                 }
 
@@ -74,29 +84,24 @@ public class LoginActivity extends AppCompatActivity {
     private boolean authenticateUser()
     {
 
-        for (AppUser user: AppUserDb.UsersArrayList)
-        {
-            if (user.getPassword().equals(edtPassword.getText().toString()))
-            {
-                return true;
+        if(!AppUserDb.UsersArrayList.isEmpty()) {
+            for (AppUser user : AppUserDb.UsersArrayList) {
+                if (user.getEmail().equals(edtEmail.getText().toString()) && user.getPassword().equals(edtPassword.getText().toString())) {
+                    return true;
+                }
             }
-            else
-                return false;
         }
         return false;
     }
 
-    private boolean checkIfEmailExists()
-    {
+    private boolean checkIfEmailExists() {
 
-        for (AppUser user: AppUserDb.UsersArrayList)
-        {
-            if (user.getEmail().equals(edtEmail.getText().toString()))
-            {
-                return true;
+        if (!AppUserDb.UsersArrayList.isEmpty()) {
+            for (AppUser user : AppUserDb.UsersArrayList) {
+                if (user.getEmail().equals(edtEmail.getText().toString())) {
+                    return true;
+                }
             }
-            else
-                return false;
         }
         return false;
     }

@@ -7,4 +7,5 @@ public class AppUserDb
     public static int userId = 0;
 
     public static ArrayList<AppUser> UsersArrayList = new ArrayList<>();
+
 }
