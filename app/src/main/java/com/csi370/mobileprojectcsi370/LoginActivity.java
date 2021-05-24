@@ -3,6 +3,7 @@ package com.csi370.mobileprojectcsi370;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+
+
 
     EditText edtEmail, edtPassword;
 
@@ -30,9 +33,10 @@ public class LoginActivity extends AppCompatActivity {
 
         // For sharedPreference - DO NOT REMOVE YET
         //Keep sharePreference updated with AppUserDb
-//        if(!AppUserDb.UsersArrayList.isEmpty()) {
-//            AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
-//        }
+
+            AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
+
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -105,5 +109,8 @@ public class LoginActivity extends AppCompatActivity {
         }
         return false;
     }
+
+
+
 
 }

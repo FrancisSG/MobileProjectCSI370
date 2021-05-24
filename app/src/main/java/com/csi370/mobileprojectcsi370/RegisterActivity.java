@@ -15,6 +15,10 @@ import java.util.ArrayList;
 
 public class RegisterActivity extends AppCompatActivity {
 
+
+
+    public static boolean hasBeenUsed = false;
+
     Button btnRegister, btnBack;
     EditText edtEmail, edtPassword, edtAddress, edtPhoneNumber;
 
@@ -32,9 +36,9 @@ public class RegisterActivity extends AppCompatActivity {
         edtPhoneNumber = (EditText) findViewById(R.id.edtPhoneNumberRegister);
 
         // For sharedPreference - DO NOT REMOVE YET
-//        if(!AppUserDb.UsersArrayList.isEmpty()){
-//            AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
-//        }
+        if(!AppUserDb.UsersArrayList.isEmpty()){
+            AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
+        }
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -58,9 +62,12 @@ public class RegisterActivity extends AppCompatActivity {
 
                     // For sharedPreference - DO NOT REMOVE YET
                     //Add AppUser ArrayList into sharedPreference
-//                    PrefConfig.writeArrayListInPref(getApplicationContext(), AppUserDb.UsersArrayList);
+                    PrefConfig.writeArrayListInPref(getApplicationContext(), AppUserDb.UsersArrayList);
 
                     Toast.makeText(getApplicationContext(), "Registered Successfully!", Toast.LENGTH_SHORT).show();
+
+                    hasBeenUsed = true;
+                    saveData();
 
                     Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(mainActivity);
@@ -95,10 +102,18 @@ public class RegisterActivity extends AppCompatActivity {
             for (AppUser user : AppUserDb.UsersArrayList) {
                 if (user.getEmail().equals(edtEmail.getText().toString())) {
                     return true;
-                } else
-                    return false;
+                }
             }
         }
         return false;
     }
+
+    public void saveData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(MainActivity.SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putBoolean(MainActivity.BOOLEAN_PREF, hasBeenUsed);
+
+    }
+
 }
