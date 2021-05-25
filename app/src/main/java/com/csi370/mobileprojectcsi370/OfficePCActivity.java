@@ -32,7 +32,7 @@ public class OfficePCActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Unable to inquire", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Inquiries unavailable at this time", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

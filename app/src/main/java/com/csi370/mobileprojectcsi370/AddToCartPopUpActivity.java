@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -21,6 +22,8 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
     TextView txtVPrice;
     EditText edtQuantity;
     Button btnAddToCart, btnBack;
+
+    int quantity = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,29 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
+                if(!TextUtils.isEmpty(edtQuantity.getText().toString())){
+
+                    if(Integer.parseInt(edtQuantity.getText().toString()) <= 0){
+                        Toast.makeText(getApplicationContext(), "You can only order 1 or more items!", Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+                        quantity =  Integer.parseInt(edtQuantity.getText().toString());
+
+                        Cart.cart.add(new Purchase(AppUserDb.loggedInUserId,
+                                cartBundle.getInt("productId", 0),
+                                quantity,
+                                (quantity*cartBundle.getDouble("productPrice"))));
+
+                        Toast.makeText(getApplicationContext(), "Added to cart!", Toast.LENGTH_SHORT).show();
+                        Cart.cart.size();
+
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), "Fill in the field!", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
