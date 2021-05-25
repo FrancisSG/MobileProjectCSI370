@@ -22,7 +22,7 @@ public class inspectScrollActivity extends AppCompatActivity {
 
     int productId;
 
-    TextView txtVProductName;
+    TextView txtVProductName, txtVProductBrand, txtVProductCPU, txtVProductRAM, txtVProductHDD, txtVProductSSD, txtVProductGraphics, txtVProductOS;
 
     Button btnBack;
 
@@ -61,12 +61,27 @@ public class inspectScrollActivity extends AppCompatActivity {
 
                 btnBack = (Button) findViewById(R.id.btnBackInspectScroll);
                 txtVProductName = (TextView) findViewById(R.id.txtVProductName);
+        txtVProductBrand = (TextView) findViewById(R.id.txtVProductBrand);
+        txtVProductCPU = (TextView) findViewById(R.id.txtVProductCpu);
+        txtVProductRAM = (TextView) findViewById(R.id.txtVProductRam);
+        txtVProductHDD = (TextView) findViewById(R.id.txtVProductHdd);
+        txtVProductSSD = (TextView) findViewById(R.id.txtVProductSsd);
+        txtVProductGraphics = (TextView) findViewById(R.id.txtVProductGraphics);
+        txtVProductOS = (TextView) findViewById(R.id.txtVProductOs);
 
-                Bundle bundle = getIntent().getExtras();
-                productId = bundle.getInt("productId", 1);
 
-                //Populating fields
-                txtVProductName.setText(txtVProductName.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getName());
+        Bundle bundle = getIntent().getExtras();
+        productId = bundle.getInt("productId", 1);
+
+        //Populating fields
+        txtVProductName.setText(txtVProductName.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getName());
+        txtVProductBrand.setText(txtVProductBrand.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getBrand());
+        txtVProductCPU.setText(txtVProductCPU.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getCpu());
+        txtVProductRAM.setText(txtVProductRAM.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getRam());
+        txtVProductHDD.setText(txtVProductHDD.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getHdd());
+        txtVProductSSD.setText(txtVProductSSD.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getSsd());
+        txtVProductGraphics.setText(txtVProductGraphics.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getGraphics());
+        txtVProductOS.setText(txtVProductOS.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getOs());
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

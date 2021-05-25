@@ -40,13 +40,13 @@
     <string name="title_activity_inspect_scroll">ScrollingActivity</string>
 <!--Inspect strings-->
     <string name="name">Product name: \n</string>
-    <string name="brand">Brand: </string>
-    <string name="cpu">CPU: </string>
-    <string name="ram">RAM: </string>
-    <string name="HDD">HDD: </string>
-    <string name="SSD">SSD: </string>
-    <string name="graphics">Graphics: </string>
-    <string name="os">Operating System: </string>
+    <string name="brand">Brand: \n</string>
+    <string name="cpu">CPU: \n</string>
+    <string name="ram">RAM: \n</string>
+    <string name="HDD">HDD: \n</string>
+    <string name="SSD">SSD: \n</string>
+    <string name="graphics">Graphics: \n</string>
+    <string name="os">Operating System: \n</string>
 
 
 </resources>

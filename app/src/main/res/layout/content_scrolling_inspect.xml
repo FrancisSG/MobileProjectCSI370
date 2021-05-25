@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/coupdegrace"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".inspectScrollActivity"
     tools:showIn="@layout/activity_inspect_scroll">
@@ -28,8 +29,9 @@
             android:id="@+id/btnBackInspectScroll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="1100dp"
             android:text="@string/back"
+            app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,51 +49,95 @@
             app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
 
         <TextView
-            android:id="@+id/txtVProductName2"
+            android:id="@+id/txtVProductBrand"
             android:layout_width="238dp"
             android:layout_height="99dp"
+            android:layout_marginTop="128dp"
             android:gravity="center"
-            android:text="@string/name"
+            android:text="@string/brand"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="183dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
 
         <TextView
-            android:id="@+id/txtVProductName3"
+            android:id="@+id/txtVProductCpu"
             android:layout_width="238dp"
             android:layout_height="99dp"
+            android:layout_marginTop="256dp"
             android:gravity="center"
-            android:text="@string/name"
+            android:text="@string/cpu"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="305dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
 
         <TextView
-            android:id="@+id/txtVProductName4"
+            android:id="@+id/txtVProductRam"
             android:layout_width="238dp"
             android:layout_height="99dp"
+            android:layout_marginTop="388dp"
             android:gravity="center"
-            android:text="@string/name"
+            android:text="@string/ram"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="436dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
 
         <TextView
-            android:id="@+id/txtVProductName5"
+            android:id="@+id/txtVProductHdd"
             android:layout_width="238dp"
             android:layout_height="99dp"
+            android:layout_marginTop="516dp"
             android:gravity="center"
-            android:text="@string/name"
+            android:text="@string/HDD"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductSsd"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="644dp"
+            android:gravity="center"
+            android:text="@string/SSD"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductGraphics"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="780dp"
+            android:gravity="center"
+            android:text="@string/graphics"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="436dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductOs"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="920dp"
+            android:gravity="center"
+            android:text="@string/os"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
