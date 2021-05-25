@@ -69,7 +69,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Toast.makeText(getApplicationContext(), "In development", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
+
+                AppUserDb.loggedInUserId = -1;
+
+                Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);
+                startActivity(categoriesActivity);
+                finish();
             }
         });
 

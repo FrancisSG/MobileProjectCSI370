@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coupdegrace"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".InspectScrollPopUpActivity"
+    tools:showIn="@layout/activity_inspect_scroll">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtVSpecifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/specifications"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnBackInspectScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1036dp"
+            android:text="@string/back"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVProductName"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductBrand"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
+            android:text="@string/brand"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductCpu"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="248dp"
+            android:gravity="center"
+            android:text="@string/cpu"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductRam"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="372dp"
+            android:gravity="center"
+            android:text="@string/ram"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductHdd"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="496dp"
+            android:gravity="center"
+            android:text="@string/HDD"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductSsd"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="624dp"
+            android:gravity="center"
+            android:text="@string/SSD"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductGraphics"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="740dp"
+            android:gravity="center"
+            android:text="@string/graphics"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+        <TextView
+            android:id="@+id/txtVProductOs"
+            android:layout_width="238dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="860dp"
+            android:gravity="center"
+            android:text="@string/os"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVSpecifications" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

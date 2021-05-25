@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coupdegrace"
+    tools:context=".AddToCartPopUpActivity">
+
+    <ImageView
+        android:id="@+id/imgVCart"
+        android:layout_width="76dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/imgDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cart" />
+
+    <TextView
+        android:id="@+id/txtVPriceAddToCart"
+        android:layout_width="96dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/price"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgVCart" />
+
+    <Button
+        android:id="@+id/btnAddToCartPC1PopUp"
+        android:layout_width="152dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/addToCart"
+        app:backgroundTint="@color/lightBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtQuantityPopUp" />
+
+    <Button
+        android:id="@+id/btnBackAddToCartPopUp"
+        android:layout_width="116dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/back"
+        app:backgroundTint="@color/lightBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddToCartPC1PopUp" />
+
+    <EditText
+        android:id="@+id/edtQuantityPopUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterQuantity"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVPriceAddToCart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

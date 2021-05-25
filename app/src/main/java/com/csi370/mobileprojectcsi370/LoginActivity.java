@@ -47,8 +47,12 @@ public class LoginActivity extends AppCompatActivity {
                         if(authenticateUser()){
                             Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
 
-                            Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(mainActivity);
+                            //loggedInUserId is stored in AppUserId.java
+                            getCurrentLoggedInUserId();
+
+                            // User is redirected to CategoriesActivity
+                            Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);
+                            startActivity(categoriesActivity);
                             finish();
                         } else {
                             Toast.makeText(getApplicationContext(), "Incorrect password!", Toast.LENGTH_SHORT).show();
@@ -110,7 +114,16 @@ public class LoginActivity extends AppCompatActivity {
         return false;
     }
 
-
+    private int getCurrentLoggedInUserId() {
+        if(!AppUserDb.UsersArrayList.isEmpty()) {
+            for (AppUser user : AppUserDb.UsersArrayList) {
+                if (user.getEmail().equals(edtEmail.getText().toString()) && user.getPassword().equals(edtPassword.getText().toString())) {
+                    return user.getId();
+                }
+            }
+        }
+        return -1;
+    }
 
 
 }

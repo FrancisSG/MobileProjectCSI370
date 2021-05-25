@@ -14,10 +14,10 @@
     <string name="logIn">Login</string>
     <string name="guest">Enter As Guest</string>
     <string name="resetPass">Reset</string>
-    <string name="addToCart">Add</string>
+    <string name="addToCart">Add to Cart</string>
     <string name="removeFromCart">Remove</string>
     <string name="inspect">Inspect</string>
-    <string name="pickCategory">Category</string>
+    <string name="category">Category</string>
     <string name="office">Office</string>
     <string name="casual">Casual</string>
     <string name="enthusiast">Enthusiast</string>
@@ -28,6 +28,31 @@
     <string name="forgotPassText">Forgot your password? Reset here</string>
     <string name="back">Back</string>
     <!--meta data-->
+    <string name="enterQuantity">Enter Quantity</string>
     <string name="imgDesc">appIcon</string>
+    <string name="title_activity_office_p_c">ScrollingActivity</string>
+    <string name="officeFlavourText">Suitable for business solutions</string>
+    <string name="pickCategory">Pick Your Flavour</string>
+    <string name="specifications">Specifications</string>
+    <string name="price">Price \n</string>
+    <string name="officePc1Price">$549.99</string>
+    <string name="officePc2Price">$619.99</string>
+    <string name="officePc3Price">$569.99</string>
+
+    <!--Products text-->
+    <string name="officePCs">Office PCs</string>
+    <string name="pc1">MSI - Desktop Computer, Mini-Desktop</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_inspect_scroll">ScrollingActivity</string>
+    <!--Inspect strings-->
+    <string name="name">Product name: \n</string>
+    <string name="brand">Brand: \n</string>
+    <string name="cpu">CPU: \n</string>
+    <string name="ram">RAM: \n</string>
+    <string name="HDD">HDD: \n</string>
+    <string name="SSD">SSD: \n</string>
+    <string name="graphics">Graphics: \n</string>
+    <string name="os">Operating System: \n</string>
+
 
 </resources>
