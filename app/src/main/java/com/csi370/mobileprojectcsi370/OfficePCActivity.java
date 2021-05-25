@@ -17,7 +17,7 @@ public class OfficePCActivity extends AppCompatActivity {
 
 
 
-    Button btnInspectPC1, btnAddToCartPC1;
+    Button btnInspectPC1, btnAddToCartPC1, btnMyCart, btnCheckout, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,9 @@ public class OfficePCActivity extends AppCompatActivity {
 
         btnInspectPC1 = (Button) findViewById(R.id.btnInspectPC1);
         btnAddToCartPC1 = (Button) findViewById(R.id.btnAddtoCartPC1);
+        btnMyCart = (Button) findViewById(R.id.btnMyCartScrollingOffice);
+        btnCheckout = (Button) findViewById(R.id.btnCheckoutScrollingOffice);
+        btnBack = (Button) findViewById(R.id.btnBackScrollingOffice);
 
         btnInspectPC1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +81,7 @@ public class OfficePCActivity extends AppCompatActivity {
 
                 Bundle cartBundle = new Bundle();
                 cartBundle.putInt("productId", 0);
+                cartBundle.putString("productName", "MSI - Desktop Computer, Mini-Desktop");
                 cartBundle.putDouble("productPrice", 549.99);
 
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
@@ -85,6 +89,27 @@ public class OfficePCActivity extends AppCompatActivity {
                 addToCartPopUpActivity.putExtras(cartBundle);
 
                 startActivity(addToCartPopUpActivity);
+                finish();
+            }
+        });
+
+        btnMyCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent myCartActivity = new Intent(getApplicationContext(), MyCartActivity.class);
+                startActivity(myCartActivity);
+                finish();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);
+
+                startActivity(categoriesActivity);
                 finish();
             }
         });

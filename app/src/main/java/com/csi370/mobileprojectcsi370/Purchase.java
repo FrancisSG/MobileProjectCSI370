@@ -3,12 +3,14 @@ package com.csi370.mobileprojectcsi370;
 public class Purchase {
 
     private int userId;
+    private String productName;
     private int productId;
     private int quantity;
     private double price;
 
-    public Purchase(int userId, int productId, int quantity, double price) {
+    public Purchase(int userId, String productName, int productId, int quantity, double price) {
         this.userId = userId;
+        this.productName = productName;
         this.productId = productId;
         this.quantity = quantity;
         this.price = price;
@@ -23,6 +25,14 @@ public class Purchase {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public int getProductId() {

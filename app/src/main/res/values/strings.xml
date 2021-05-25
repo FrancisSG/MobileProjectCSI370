@@ -21,12 +21,13 @@
     <string name="office">Office</string>
     <string name="casual">Casual</string>
     <string name="enthusiast">Enthusiast</string>
-    <string name="checkOut">Check Out</string>
+    <string name="checkout">Checkout</string>
     <string name="cancelOrder">Cancel</string>
     <string name="purchase">Purchase</string>
     <string name="registerText">Don\'t have an account? Register here</string>
     <string name="forgotPassText">Forgot your password? Reset here</string>
     <string name="back">Back</string>
+    <string name="myCart">My Cart</string>
     <!--meta data-->
     <string name="enterQuantity">Enter Quantity</string>
     <string name="imgDesc">appIcon</string>

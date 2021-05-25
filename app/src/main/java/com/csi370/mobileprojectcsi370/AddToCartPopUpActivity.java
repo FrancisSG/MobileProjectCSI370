@@ -46,7 +46,7 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
 
         getWindow().setAttributes(params);
 
-        // Other Code
+        // Rest of code
 
         txtVPrice = (TextView) findViewById(R.id.txtVPriceAddToCart);
         edtQuantity = (EditText) findViewById(R.id.edtQuantityPopUp);
@@ -60,8 +60,6 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
                 if(!TextUtils.isEmpty(edtQuantity.getText().toString())){
 
                     if(Integer.parseInt(edtQuantity.getText().toString()) <= 0){
@@ -72,12 +70,15 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
                         quantity =  Integer.parseInt(edtQuantity.getText().toString());
 
                         Cart.cart.add(new Purchase(AppUserDb.loggedInUserId,
+                                cartBundle.getString("productName", ""),
                                 cartBundle.getInt("productId", 0),
                                 quantity,
                                 (quantity*cartBundle.getDouble("productPrice"))));
 
                         Toast.makeText(getApplicationContext(), "Added to cart!", Toast.LENGTH_SHORT).show();
-                        Cart.cart.size();
+
+                        //For debugging - to check Cart using breakpoint
+//                        Cart.cart.size();
 
                     }
                 } else {
