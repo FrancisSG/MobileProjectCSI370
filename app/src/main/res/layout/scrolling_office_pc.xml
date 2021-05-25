@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/coupdegrace"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".OfficePCActivity"
     tools:showIn="@layout/activity_office_p_c">
@@ -11,14 +12,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/viciousstancebgcolor">
+        android:background="@drawable/coupdegrace">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtVPC1Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="131dp"
             android:text="@string/pc1"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -26,17 +28,33 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/officeFlavourText"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVOfficePCsTitle" />
+
+        <TextView
             android:id="@+id/txtVOfficePCsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="100dp"
             android:layout_marginRight="100dp"
+            android:fontFamily="sans-serif-thin"
             android:text="@string/officePCs"
-            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,9 +76,9 @@
             android:layout_height="438dp"
             android:layout_marginStart="96dp"
             android:layout_marginLeft="96dp"
-            android:layout_marginTop="268dp"
-            android:layout_marginEnd="99dp"
-            android:layout_marginRight="99dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginRight="96dp"
             android:contentDescription="@string/imgDesc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,12 +86,12 @@
             app:srcCompat="@drawable/office1" />
 
         <Button
-            android:id="@+id/btnInspectPC"
+            android:id="@+id/btnInspectPC1"
             android:layout_width="123dp"
             android:layout_height="42dp"
-            android:layout_marginTop="573dp"
+            android:layout_marginTop="550dp"
             android:text="@string/inspect"
-            app:backgroundTint="@color/dark1"
+            app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -82,12 +100,12 @@
             android:id="@+id/btnAddtoCartPC1"
             android:layout_width="193dp"
             android:layout_height="42dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="590dp"
             android:text="@string/addToCart"
-            app:backgroundTint="@color/dark1"
+            app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnInspectPC" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

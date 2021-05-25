@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Toast.makeText(getApplicationContext(), "In development", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
 
-                Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
-                startActivity(officePCActivity);
+                Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);
+                startActivity(categoriesActivity);
                 finish();
             }
         });
