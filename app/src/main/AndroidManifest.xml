@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProjectCSI370">
-        <activity android:name=".PopUpWindow"></activity>
+        <activity
+            android:name=".OfficePCActivity"
+            android:label="@string/title_activity_office_p_c"
+            android:theme="@style/Theme.MobileProjectCSI370.NoActionBar"></activity>
+        <activity android:name=".PopUpWindow" />
         <activity android:name=".ResetPassActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />

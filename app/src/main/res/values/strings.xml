@@ -14,7 +14,7 @@
     <string name="logIn">Login</string>
     <string name="guest">Enter As Guest</string>
     <string name="resetPass">Reset</string>
-    <string name="addToCart">Add</string>
+    <string name="addToCart">Add to Cart</string>
     <string name="removeFromCart">Remove</string>
     <string name="inspect">Inspect</string>
     <string name="pickCategory">Category</string>
@@ -29,5 +29,10 @@
     <string name="back">Back</string>
     <!--meta data-->
     <string name="imgDesc">appIcon</string>
+    <string name="title_activity_office_p_c">ScrollingActivity</string>
+    <!--Products text-->
+    <string name="officePCs">Office PCs</string>
+    <string name="pc1">MSI - Desktop Computer, Mini-Desktop</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

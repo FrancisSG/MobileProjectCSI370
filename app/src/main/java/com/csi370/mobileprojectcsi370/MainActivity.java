@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 Toast.makeText(getApplicationContext(), "In development", Toast.LENGTH_SHORT).show();
+
+                Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
+                startActivity(officePCActivity);
+                finish();
             }
         });
 
