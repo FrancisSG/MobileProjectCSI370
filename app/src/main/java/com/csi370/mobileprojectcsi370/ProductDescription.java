@@ -12,12 +12,13 @@ public class ProductDescription {
     private String ssd;
     private String graphics;
     private String os;
+    private double price;
 
 
 
     public ProductDescription() { }
 
-    public ProductDescription(int productId, String name, String brand, String cpu, String ram, String hdd, String ssd, String graphics, String os)
+    public ProductDescription(int productId, String name, String brand, String cpu, String ram, String hdd, String ssd, String graphics, String os, double prince)
     {
         this.productId = productId;
         this.name = name;
@@ -28,6 +29,7 @@ public class ProductDescription {
         this.ssd = ssd;
         this.graphics = graphics;
         this.os= os;
+        this.price = price;
     }
 
     public int getProductId() {
@@ -101,4 +103,13 @@ public class ProductDescription {
     public void setOs(String os) {
         this.os = os;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
 }

@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProjectCSI370">
         <activity
-            android:name=".inspectScrollActivity"
+            android:name=".InspectScrollPopUpActivity"
             android:label="@string/title_activity_inspect_scroll"
-            android:theme="@style/Theme.MobileProjectCSI370.NoActionBar"></activity>
+            android:theme="@style/Theme.MobileProjectCSI370.NoActionBar" />
         <activity android:name=".CategoriesActivity" />
         <activity
             android:name=".OfficePCActivity"
             android:label="@string/title_activity_office_p_c"
             android:theme="@style/Theme.MobileProjectCSI370.NoActionBar" />
-        <activity android:name=".PopUpWindow" />
+        <activity android:name=".AddToCartPopUpActivity" />
         <activity android:name=".ResetPassActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />

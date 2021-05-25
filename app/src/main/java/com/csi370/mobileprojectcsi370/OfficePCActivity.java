@@ -38,6 +38,7 @@ public class OfficePCActivity extends AppCompatActivity {
         });
 
         btnInspectPC1 = (Button) findViewById(R.id.btnInspectPC1);
+        btnAddToCartPC1 = (Button) findViewById(R.id.btnAddtoCartPC1);
 
         btnInspectPC1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,18 +55,36 @@ public class OfficePCActivity extends AppCompatActivity {
                         "1 TB HDD",
                         "Unavailable",
                         "Intel HD Graphics 620",
-                        "Windows 10"
+                        "Windows 10",
+                        549.99
 
                 ));
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("productId", 0);
 
-                Intent inspectScrollActivity = new Intent(getApplicationContext(), inspectScrollActivity.class);
+                Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
                 inspectScrollActivity.putExtras(bundle);
 
                 startActivity(inspectScrollActivity);
+                finish();
+            }
+        });
+
+        btnAddToCartPC1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Bundle cartBundle = new Bundle();
+                cartBundle.putInt("productId", 0);
+                cartBundle.putDouble("productPrice", 549.99);
+
+                Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
+
+                addToCartPopUpActivity.putExtras(cartBundle);
+
+                startActivity(addToCartPopUpActivity);
                 finish();
             }
         });

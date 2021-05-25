@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
             {
                 Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
 
+                AppUserDb.loggedInUserId = -1;
+
                 Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);
                 startActivity(categoriesActivity);
                 finish();

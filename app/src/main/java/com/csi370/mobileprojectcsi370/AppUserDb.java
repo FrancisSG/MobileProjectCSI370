@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class AppUserDb
 {
-    public static int userId = 0;
+    public static int loggedInUserId = 0;
 
     public static ArrayList<AppUser> UsersArrayList = new ArrayList<>();
 

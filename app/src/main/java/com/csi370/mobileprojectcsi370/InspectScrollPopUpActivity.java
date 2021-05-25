@@ -18,7 +18,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-public class inspectScrollActivity extends AppCompatActivity {
+public class InspectScrollPopUpActivity extends AppCompatActivity {
 
     int productId;
 
