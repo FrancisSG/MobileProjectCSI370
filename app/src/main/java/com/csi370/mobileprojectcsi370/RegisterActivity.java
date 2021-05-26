@@ -50,8 +50,8 @@ public class RegisterActivity extends AppCompatActivity {
                         && !TextUtils.isEmpty(edtPhoneNumber.getText().toString())
                 ) {
                 if(!checkIfEmailExists()){
-                    AppUserDb.loggedInUserId++;
-
+                    AppUserDb.loggedInUserId = PrefConfig.arraySize + 1;
+                    int test = AppUserDb.loggedInUserId;
                     AppUserDb.UsersArrayList.add(
                             new AppUser(
                                     AppUserDb.loggedInUserId,

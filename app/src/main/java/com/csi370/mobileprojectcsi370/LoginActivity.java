@@ -31,10 +31,9 @@ public class LoginActivity extends AppCompatActivity {
         btnReset = (Button) findViewById(R.id.btnResetLogin);
         btnBack = (Button) findViewById(R.id.btnBackLogin);
 
-        // For sharedPreference - DO NOT REMOVE YET
-        //Keep sharePreference updated with AppUserDb
 
-            AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
+        //Keep sharePreference updated with AppUserDb
+        AppUserDb.UsersArrayList = PrefConfig.readListFromSharedPreference(this);
 
 
 
@@ -48,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Happy shopping!", Toast.LENGTH_SHORT).show();
 
                             //loggedInUserId is stored in AppUserId.java
-                            getCurrentLoggedInUserId();
+                            AppUserDb.loggedInUserId = getCurrentLoggedInUserId();
 
                             // User is redirected to CategoriesActivity
                             Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);

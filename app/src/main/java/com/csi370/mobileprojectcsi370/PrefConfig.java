@@ -13,6 +13,8 @@ import java.util.List;
 
 public class PrefConfig {
 
+    public static int arraySize = 0;
+
     private static final String LIST_KEY = "list_key";
 
     public static void writeArrayListInPref(Context context, ArrayList<AppUser> AppUserList) {
@@ -33,6 +35,8 @@ public class PrefConfig {
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<AppUser>>() {}.getType();
         ArrayList<AppUser> list = gson.fromJson(jsonString, type);
+
+        arraySize = list.size();
 
         return list;
 
