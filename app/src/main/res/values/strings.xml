@@ -28,6 +28,7 @@
     <string name="forgotPassText">Forgot your password? Reset here</string>
     <string name="back">Back</string>
     <string name="myCart">My Cart</string>
+    <string name="removeProduct">Remove Purchase</string>
     <!--meta data-->
     <string name="enterQuantity">Enter Quantity</string>
     <string name="imgDesc">appIcon</string>
@@ -39,7 +40,7 @@
     <string name="officePc1Price">$549.99</string>
     <string name="officePc2Price">$619.99</string>
     <string name="officePc3Price">$569.99</string>
-
+    <string name="enterPurchaseId">Enter Purchase ID</string>
     <!--Products text-->
     <string name="officePCs">Office PCs</string>
     <string name="pc1">MSI - Desktop Computer, Mini-Desktop</string>

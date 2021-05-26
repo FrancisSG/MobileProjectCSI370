@@ -17,7 +17,7 @@ public class OfficePCActivity extends AppCompatActivity {
 
 
 
-    Button btnInspectPC1, btnAddToCartPC1, btnMyCart, btnCheckout, btnBack;
+    Button btnInspectPC1, btnAddToCartPC1, btnMyCart, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,6 @@ public class OfficePCActivity extends AppCompatActivity {
         btnInspectPC1 = (Button) findViewById(R.id.btnInspectPC1);
         btnAddToCartPC1 = (Button) findViewById(R.id.btnAddtoCartPC1);
         btnMyCart = (Button) findViewById(R.id.btnMyCartScrollingOffice);
-        btnCheckout = (Button) findViewById(R.id.btnCheckoutScrollingOffice);
         btnBack = (Button) findViewById(R.id.btnBackScrollingOffice);
 
         btnInspectPC1.setOnClickListener(new View.OnClickListener() {
@@ -74,8 +73,6 @@ public class OfficePCActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
 
         btnAddToCartPC1.setOnClickListener(new View.OnClickListener() {
             @Override

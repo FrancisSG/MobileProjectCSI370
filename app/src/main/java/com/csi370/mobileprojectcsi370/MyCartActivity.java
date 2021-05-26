@@ -4,14 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MyCartActivity extends AppCompatActivity {
 
-    Button btnBack;
+    Button btnBack, btnRemovePurchase;
     TextView txtVCartContents;
+    EditText edtRemovePurchase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +26,9 @@ public class MyCartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_cart);
 
         btnBack = (Button) findViewById(R.id.btnBackMyCart);
+        btnRemovePurchase = (Button) findViewById(R.id.btnRemovePurchaseMyCart);
         txtVCartContents = (TextView) findViewById(R.id.txtVCartContents);
+        edtRemovePurchase = (EditText) findViewById(R.id.edtEnterProductIDMyCart);
 
         String text = "";
         double grandTotal = 0.0;
@@ -47,8 +56,21 @@ public class MyCartActivity extends AppCompatActivity {
             }
         });
 
+        btnRemovePurchase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(TextUtils.isEmpty(edtRemovePurchase.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "Fill in the field!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
 
     }
+
+
 
     private String buildString(Purchase purchase) {
 
@@ -65,6 +87,17 @@ public class MyCartActivity extends AppCompatActivity {
         + "\n" + "Purchaser ID: " + user;
 
         return builtString;
+    }
+
+    public boolean removePurchase(ArrayList<Cart> cart, int idOfPurchaseToRemove){
+
+        for(Purchase purchase: Cart.cart) {
+            if(Integer.parseInt(edtRemovePurchase.getText().toString()) == idOfPurchaseToRemove) {
+                Cart.cart.remove(idOfPurchaseToRemove);
+            }
+        }
+
+        return false;
     }
 
 }

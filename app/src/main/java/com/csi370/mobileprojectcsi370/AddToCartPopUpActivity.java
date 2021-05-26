@@ -24,6 +24,7 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
     Button btnAddToCart, btnBack;
 
     int quantity = 0;
+    int purchaseID = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +69,13 @@ public class AddToCartPopUpActivity extends AppCompatActivity {
                     } else {
 
                         quantity =  Integer.parseInt(edtQuantity.getText().toString());
+                        purchaseID++;
 
                         Cart.cart.add(new Purchase(AppUserDb.loggedInUserId,
                                 cartBundle.getString("productName", ""),
                                 cartBundle.getInt("productId", 0),
                                 quantity,
-                                (quantity*cartBundle.getDouble("productPrice"))));
+                                (quantity*cartBundle.getDouble("productPrice")), purchaseID));
 
                         Toast.makeText(getApplicationContext(), "Added to cart!", Toast.LENGTH_SHORT).show();
 

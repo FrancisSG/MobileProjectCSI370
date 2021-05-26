@@ -131,26 +131,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnCheckoutScrollingOffice"
-            android:layout_width="157dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="845dp"
-            android:text="@string/checkout"
-            app:backgroundTint="@color/weirdBlue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
             android:id="@+id/btnMyCartScrollingOffice"
-            android:layout_width="137dp"
+            android:layout_width="167dp"
             android:layout_height="40dp"
-            android:layout_marginTop="800dp"
+            android:layout_marginTop="850dp"
             android:text="@string/myCart"
             app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
