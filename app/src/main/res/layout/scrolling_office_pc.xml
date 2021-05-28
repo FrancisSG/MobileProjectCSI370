@@ -9,6 +9,7 @@
     tools:context=".OfficePCActivity"
     tools:showIn="@layout/activity_office_p_c">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="704dp"
-            android:text="@string/pc1"
+            android:text="@string/pc2"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -133,52 +134,42 @@
 
         <ImageView
             android:id="@+id/imgOfficePc3"
-            android:layout_width="216dp"
-            android:layout_height="438dp"
-            android:layout_marginTop="632dp"
+            android:layout_width="251dp"
+            android:layout_height="472dp"
+            android:layout_marginTop="624dp"
             android:contentDescription="@string/imgDesc"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/office2" />
+            app:srcCompat="@drawable/office3" />
 
         <ImageView
             android:id="@+id/imgOfficePc4"
-            android:layout_width="216dp"
-            android:layout_height="438dp"
-            android:layout_marginStart="96dp"
-            android:layout_marginLeft="96dp"
-            android:layout_marginTop="824dp"
-            android:layout_marginEnd="97dp"
-            android:layout_marginRight="97dp"
+            android:layout_width="251dp"
+            android:layout_height="493dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="620dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
             android:contentDescription="@string/imgDesc"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.416"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/office1" />
+            app:srcCompat="@drawable/office4" />
 
         <TextView
             android:id="@+id/txtVOfficePc2Price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1104dp"
-            android:text="@string/officePc1Price"
+            android:layout_marginTop="956dp"
+            android:text="@string/officePc2Price"
             android:textColor="@color/black"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnAddtoCartPC2"
-            android:layout_width="193dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="1200dp"
-            android:text="@string/addToCart"
-            app:backgroundTint="@color/weirdBlue"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -186,34 +177,123 @@
             android:id="@+id/btnInspectPC2"
             android:layout_width="123dp"
             android:layout_height="42dp"
-            android:layout_marginTop="1160dp"
+            android:layout_marginTop="12dp"
             android:text="@string/inspect"
             app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVOfficePc2Price" />
+
+        <Button
+            android:id="@+id/btnAddtoCartPC2"
+            android:layout_width="193dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="1060dp"
+            android:text="@string/addToCart"
+            app:backgroundTint="@color/weirdBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnBackScrollingOffice"
-            android:layout_width="133dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/back"
-            app:backgroundTint="@color/lightBlue"
+        <ImageView
+            android:id="@+id/imgOfficePc6"
+            android:layout_width="233dp"
+            android:layout_height="471dp"
+            android:layout_marginTop="1060dp"
+            android:contentDescription="@string/imgDesc"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMyCartScrollingOffice" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/office6" />
+
+        <Button
+            android:id="@+id/btnAddtoCartPC3"
+            android:layout_width="193dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="1525dp"
+            android:text="@string/addToCart"
+            app:backgroundTint="@color/weirdBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnMyCartScrollingOffice"
             android:layout_width="167dp"
             android:layout_height="40dp"
-            android:layout_marginTop="1300dp"
+            android:layout_marginTop="28dp"
             android:text="@string/myCart"
             app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddtoCartPC3" />
+
+        <Button
+            android:id="@+id/btnInspectPC3"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="475dp"
+            android:text="@string/inspect"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVOfficePc2Price" />
+
+        <Button
+            android:id="@+id/btnBackScrollingOffice"
+            android:layout_width="133dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/back"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMyCartScrollingOffice" />
+
+        <TextView
+            android:id="@+id/txtVOfficePc3Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1430dp"
+            android:text="@string/officePc3Price"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVPC3Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1130dp"
+            android:text="@string/pc3"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgOfficePc5"
+            android:layout_width="144dp"
+            android:layout_height="369dp"
+            android:layout_marginTop="1108dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/office5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

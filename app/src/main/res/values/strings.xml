@@ -38,9 +38,7 @@
     <string name="pickCategory">Pick Your Flavour</string>
     <string name="specifications">Specifications</string>
     <string name="price">Price \n</string>
-    <string name="officePc1Price">$549.99</string>
-    <string name="officePc2Price">$619.99</string>
-    <string name="officePc3Price">$569.99</string>
+
     <string name="enterPurchaseId">Enter Purchase ID</string>
     <string name="total">Total</string>
     <string name="forGuest">So we can get you your order</string>
@@ -57,10 +55,13 @@
     <string name="SSD">SSD: \n</string>
     <string name="graphics">Graphics: \n</string>
     <string name="os">Operating System: \n</string>
-    <!--Office PC names-->
+    <!--Office PC names and prices-->
     <string name="pc1">MSI - Desktop Computer, Mini-Desktop</string>
+    <string name="officePc1Price">$549.99</string>
     <string name="pc2">Dell OptiPlex - Desktop Computer</string>
+    <string name="officePc2Price">$619.99</string>
     <string name="pc3">HP Default - Desktop</string>
+    <string name="officePc3Price">$569.99</string>
 
 
 </resources>

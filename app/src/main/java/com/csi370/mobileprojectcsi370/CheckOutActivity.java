@@ -57,9 +57,8 @@ public class CheckOutActivity extends AppCompatActivity {
                         txtVTotalPrice.setText("Thank you for your purchase!");
 
                         //Empty Cart
-                        for(Purchase purchase: Cart.cart) {
-                            Cart.cart.remove(purchase);
-                        }
+                        MainActivity.purchaseID = 0;
+                        Cart.cart.clear();
                     }
                 }
                 else {
@@ -68,9 +67,8 @@ public class CheckOutActivity extends AppCompatActivity {
                     txtVTotalPrice.setText("Thank you for your purchase!");
 
                     //Empty Cart
-                    for(Purchase purchase: Cart.cart) {
-                        Cart.cart.remove(purchase);
-                    }
+                    MainActivity.purchaseID = 0;
+                    Cart.cart.clear();
                 }
             }
         });

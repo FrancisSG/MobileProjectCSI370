@@ -71,17 +71,28 @@ public class InspectScrollPopUpActivity extends AppCompatActivity {
 
 
         Bundle bundle = getIntent().getExtras();
-        productId = bundle.getInt("productId", 1);
+        productId = bundle.getInt("productId", 0);
 
         //Populating fields
-        txtVProductName.setText(txtVProductName.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getName());
-        txtVProductBrand.setText(txtVProductBrand.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getBrand());
-        txtVProductCPU.setText(txtVProductCPU.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getCpu());
-        txtVProductRAM.setText(txtVProductRAM.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getRam());
-        txtVProductHDD.setText(txtVProductHDD.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getHdd());
-        txtVProductSSD.setText(txtVProductSSD.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getSsd());
-        txtVProductGraphics.setText(txtVProductGraphics.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getGraphics());
-        txtVProductOS.setText(txtVProductOS.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(productId).getOs());
+        //Populating fields
+        for(ProductDescription product : ProductsInfoArrayList.productsInfoArrayList) {
+            if(product.getProductId() == productId) {
+
+                int indexOfProduct = ProductsInfoArrayList.productsInfoArrayList.indexOf(product);
+
+                txtVProductName.setText(txtVProductName.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getName());
+                txtVProductBrand.setText(txtVProductBrand.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getBrand());
+                txtVProductCPU.setText(txtVProductCPU.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getCpu());
+                txtVProductRAM.setText(txtVProductRAM.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getRam());
+                txtVProductHDD.setText(txtVProductHDD.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getHdd());
+                txtVProductSSD.setText(txtVProductSSD.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getSsd());
+                txtVProductGraphics.setText(txtVProductGraphics.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getGraphics());
+                txtVProductOS.setText(txtVProductOS.getText().toString() + ProductsInfoArrayList.productsInfoArrayList.get(indexOfProduct).getOs());
+
+                break;
+            }
+        }
+
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,7 +18,7 @@ public class ProductDescription {
 
     public ProductDescription() { }
 
-    public ProductDescription(int productId, String name, String brand, String cpu, String ram, String hdd, String ssd, String graphics, String os, double prince)
+    public ProductDescription(int productId, String name, String brand, String cpu, String ram, String hdd, String ssd, String graphics, String os, double price)
     {
         this.productId = productId;
         this.name = name;

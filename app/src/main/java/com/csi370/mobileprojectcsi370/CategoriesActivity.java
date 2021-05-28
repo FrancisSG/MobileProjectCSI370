@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class CategoriesActivity extends AppCompatActivity {
 
-    ImageButton imgBtnBusinessPCs;
+    ImageButton imgBtnBusinessPCs, imgBtnCasualPCs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class CategoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categories);
 
         imgBtnBusinessPCs = (ImageButton) findViewById(R.id.imgBtnBusinessPCs);
+        imgBtnCasualPCs = (ImageButton) findViewById(R.id.imgBtnCasualPCs);
 
         imgBtnBusinessPCs.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -27,6 +28,17 @@ public class CategoriesActivity extends AppCompatActivity {
 
             }
         });
+
+        imgBtnCasualPCs.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
+                startActivity(officePCActivity);
+                finish();
+
+            }
+        });
+
 
     }
 }

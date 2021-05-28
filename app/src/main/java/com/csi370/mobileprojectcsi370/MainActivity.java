@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String BOOLEAN_PREF = "booleanPref";
-
+    public static int purchaseID = 0;
     Button btnLogin, btnRegister, btnGuest;
 
     boolean toggleButton = false;
