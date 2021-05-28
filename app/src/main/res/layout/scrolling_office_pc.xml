@@ -15,19 +15,6 @@
         android:background="@drawable/coupdegrace">
 
         <TextView
-            android:id="@+id/txtVPC1Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="131dp"
-            android:text="@string/pc1"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +45,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/txtVPC1Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="131dp"
+            android:text="@string/pc1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imgOfficePc1"
             android:layout_width="216dp"
@@ -85,6 +85,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/office1" />
 
+        <TextView
+            android:id="@+id/txtVOfficePc1Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="528dp"
+            android:text="@string/officePc1Price"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/btnInspectPC1"
             android:layout_width="123dp"
@@ -108,13 +120,75 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txtVOfficePc1Price"
+            android:id="@+id/txtVPC2Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="528dp"
+            android:layout_marginTop="704dp"
+            android:text="@string/pc1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgOfficePc3"
+            android:layout_width="216dp"
+            android:layout_height="438dp"
+            android:layout_marginTop="632dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/office2" />
+
+        <ImageView
+            android:id="@+id/imgOfficePc4"
+            android:layout_width="216dp"
+            android:layout_height="438dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginLeft="96dp"
+            android:layout_marginTop="824dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginRight="97dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/office1" />
+
+        <TextView
+            android:id="@+id/txtVOfficePc2Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1104dp"
             android:text="@string/officePc1Price"
             android:textColor="@color/black"
             android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddtoCartPC2"
+            android:layout_width="193dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="1200dp"
+            android:text="@string/addToCart"
+            app:backgroundTint="@color/weirdBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnInspectPC2"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="1160dp"
+            android:text="@string/inspect"
+            app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -123,18 +197,18 @@
             android:id="@+id/btnBackScrollingOffice"
             android:layout_width="133dp"
             android:layout_height="35dp"
-            android:layout_marginTop="900dp"
+            android:layout_marginTop="10dp"
             android:text="@string/back"
             app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btnMyCartScrollingOffice" />
 
         <Button
             android:id="@+id/btnMyCartScrollingOffice"
             android:layout_width="167dp"
             android:layout_height="40dp"
-            android:layout_marginTop="850dp"
+            android:layout_marginTop="1300dp"
             android:text="@string/myCart"
             app:backgroundTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"

@@ -15,10 +15,13 @@ import java.util.ArrayList;
 
 public class MyCartActivity extends AppCompatActivity {
 
-    Button btnBack, btnRemovePurchase;
+    Button btnBack, btnRemovePurchase, btnCheckout;
     TextView txtVCartContents;
     EditText edtRemovePurchase;
 
+    public static double grandTotal = 0.0;
+    public double bGrandTotal = 0.0;
+    public static String text = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,26 +29,13 @@ public class MyCartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_cart);
 
         btnBack = (Button) findViewById(R.id.btnBackMyCart);
+        btnCheckout = (Button) findViewById(R.id.btnCheckoutMyCart);
         btnRemovePurchase = (Button) findViewById(R.id.btnRemovePurchaseMyCart);
         txtVCartContents = (TextView) findViewById(R.id.txtVCartContents);
         edtRemovePurchase = (EditText) findViewById(R.id.edtEnterProductIDMyCart);
 
-        String text = "";
-        double grandTotal = 0.0;
 
-        if(!Cart.cart.isEmpty()) {
-            for (Purchase purchase : Cart.cart) {
-                text += buildString(purchase) + "\n\n";
-                grandTotal += purchase.getPrice();
-            }
-
-            text += "\nGrand Total of $" + grandTotal;
-            txtVCartContents.setText(text);
-
-        } else {
-            text += "Cart is currently empty";
-            txtVCartContents.setText(text);
-        }
+        updateCart(text, grandTotal);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +52,28 @@ public class MyCartActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(edtRemovePurchase.getText().toString())) {
                     Toast.makeText(getApplicationContext(), "Fill in the field!", Toast.LENGTH_SHORT).show();
+                } else {
+                    removePurchase(Integer.parseInt(edtRemovePurchase.getText().toString()));
+                    updateCart("", grandTotal);
                 }
 
+            }
+        });
+
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(Cart.cart.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Cart is empty!", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    Bundle totalPriceBundle = new Bundle();
+                    totalPriceBundle.putDouble("grandTotal", bGrandTotal);
+                    Intent checkOutActivity = new Intent(getApplicationContext(), CheckOutActivity.class);
+                    checkOutActivity.putExtras(totalPriceBundle);
+                    startActivity(checkOutActivity);
+                    finish();
+                }
             }
         });
 
@@ -84,20 +94,52 @@ public class MyCartActivity extends AppCompatActivity {
         }
 
         builtString += "Product Name: " + purchase.getProductName() + "\n" + "Sum: (" + purchase.getQuantity() + " item(s)) $" + purchase.getPrice()
-        + "\n" + "Purchaser ID: " + user;
+        + "\n" + "Purchaser ID: " + user + "\n" + "Purchase ID: " + purchase.getPurchaseId() ;
 
         return builtString;
     }
 
-    public boolean removePurchase(ArrayList<Cart> cart, int idOfPurchaseToRemove){
+    private void updateCart(String text, double grandTotal){
 
-        for(Purchase purchase: Cart.cart) {
-            if(Integer.parseInt(edtRemovePurchase.getText().toString()) == idOfPurchaseToRemove) {
-                Cart.cart.remove(idOfPurchaseToRemove);
+        if(!Cart.cart.isEmpty()) {
+            for (Purchase purchase : Cart.cart) {
+                text += buildString(purchase) + "\n\n";
+                grandTotal += purchase.getPrice();
+            }
+
+            text += "\nGrand Total of $" + grandTotal;
+            bGrandTotal = grandTotal;
+            txtVCartContents.setText(text);
+
+        } else {
+            text += "Cart is currently empty";
+            txtVCartContents.setText(text);
+        }
+
+    }
+
+    public void removePurchase(int idOfPurchaseToRemove){
+
+        boolean isFound = false;
+
+        if(Cart.cart.isEmpty()){
+            Toast.makeText(getApplicationContext(), "Nothing to remove!", Toast.LENGTH_SHORT).show();
+        } else {
+            for(Purchase purchase: Cart.cart) {
+                if(idOfPurchaseToRemove == purchase.getPurchaseId()) {
+                    Cart.cart.remove(purchase);
+                    isFound = true;
+                    break;
+                }
             }
         }
 
-        return false;
+        if(isFound) {
+            Toast.makeText(getApplicationContext(), "Purchase removed!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Purchase with that ID does not exist!", Toast.LENGTH_SHORT).show();
+
+        }
     }
 
 }

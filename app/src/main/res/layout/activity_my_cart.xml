@@ -39,9 +39,11 @@
         android:id="@+id/btnRemovePurchaseMyCart"
         android:layout_width="155dp"
         android:layout_height="62dp"
-        android:layout_marginTop="535dp"
+        android:layout_marginTop="555dp"
+        android:layout_marginBottom="114dp"
         android:text="@string/removeProduct"
         app:backgroundTint="@color/lightBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +55,7 @@
         android:layout_height="54dp"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="540dp"
+        android:layout_marginTop="560dp"
         android:layout_marginEnd="196dp"
         android:layout_marginRight="196dp"
         android:layout_marginBottom="90dp"
@@ -69,6 +71,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/imgVCartIcon"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/imgDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cart" />
+
     <TextView
         android:id="@+id/txtVMyCartTitle"
         android:layout_width="176dp"
@@ -79,21 +92,9 @@
         android:text="@string/myCart"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgVCartIcon" />
-
-    <ImageView
-        android:id="@+id/imgVCartIcon"
-        android:layout_width="115dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/imgDesc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cart" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -101,7 +102,7 @@
         android:layout_height="350dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="65dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="160dp"
