@@ -35,9 +35,11 @@
     <string name="imgDesc">appIcon</string>
     <string name="title_activity_office_p_c">ScrollingActivity</string>
     <string name="officeFlavourText">Suitable for business solutions</string>
+    <string name="casualFlavourText">Jack Of All Trades</string>
     <string name="pickCategory">Pick Your Flavour</string>
     <string name="specifications">Specifications</string>
     <string name="price">Price \n</string>
+    <string name="casualPCs">Casual PCs</string>
 
     <string name="enterPurchaseId">Enter Purchase ID</string>
     <string name="total">Total</string>
@@ -62,6 +64,13 @@
     <string name="officePc2Price">$619.99</string>
     <string name="pc3">HP Default - Desktop</string>
     <string name="officePc3Price">$569.99</string>
+
+    <string name="pc4">CyberPowerPC - Gamer Master Gaming Desktop</string>
+    <string name="casualPc1Price">$649.99</string>
+    <string name="pc5">CyberPowerPC - Gamer Xtreme Gaming Desktop</string>
+    <string name="casualPc2Price">$1049.99</string>
+    <string name="pc6">Dell - G5 5000 Gaming Desktop</string>
+    <string name="casualPc3Price">$1199.99</string>
 
 
 </resources>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProjectCSI370">
-        <activity android:name=".CheckOutActivity"></activity>
+        <activity android:name=".CasualPCActivity"></activity>
+        <activity android:name=".CheckOutActivity" />
         <activity android:name=".MyCartActivity" />
         <activity
             android:name=".InspectScrollPopUpActivity"

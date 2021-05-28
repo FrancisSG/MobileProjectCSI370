@@ -2,6 +2,7 @@ package com.csi370.mobileprojectcsi370;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,8 +33,8 @@ public class CategoriesActivity extends AppCompatActivity {
         imgBtnCasualPCs.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
-                startActivity(officePCActivity);
+                Intent casualPCActivity = new Intent(getApplicationContext(), CasualPCActivity.class);
+                startActivity(casualPCActivity);
                 finish();
 
             }
