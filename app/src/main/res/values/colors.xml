@@ -10,4 +10,6 @@
     <color name="dark1">#415366</color>
     <color name="lightBlue">#9aa9cf</color>
     <color name="weirdBlue">#98b9ea</color>
+    <color name="redi">#dd7d60</color>
+    <color name="darkerred">#c65e3f</color>
 </resources>

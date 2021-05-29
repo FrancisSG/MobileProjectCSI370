@@ -64,6 +64,7 @@
         android:gravity="center"
         android:hint="@string/enterPurchaseId"
         android:inputType="number"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -118,6 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="386dp"
             android:text="@string/myCart"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
     </ScrollView>

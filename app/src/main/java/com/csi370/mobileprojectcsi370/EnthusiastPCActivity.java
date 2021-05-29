@@ -13,16 +13,16 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class CasualPCActivity extends AppCompatActivity {
+public class EnthusiastPCActivity extends AppCompatActivity {
 
-    Button btnInspectPC4, btnAddToCartPC4, btnMyCart, btnBack;
-    Button btnInspectPC5, btnAddToCartPC5;
-    Button btnInspectPC6, btnAddToCartPC6;
+    Button btnInspectPC7, btnAddToCartPC7, btnMyCart, btnBack;
+    Button btnInspectPC8, btnAddToCartPC8;
+    Button btnInspectPC9, btnAddToCartPC9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_casual_p_c);
+        setContentView(R.layout.activity_enthusiast_p_c);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
@@ -37,39 +37,39 @@ public class CasualPCActivity extends AppCompatActivity {
             }
         });
 
-        btnInspectPC4 = (Button) findViewById(R.id.btnInspectPC4);
-        btnAddToCartPC4 = (Button) findViewById(R.id.btnAddtoCartPC4);
-        btnInspectPC5 = (Button) findViewById(R.id.btnInspectPC5);
-        btnAddToCartPC5 = (Button) findViewById(R.id.btnAddtoCartPC5);
-        btnInspectPC6 = (Button) findViewById(R.id.btnInspectPC6);
-        btnAddToCartPC6 = (Button) findViewById(R.id.btnAddtoCartPC6);
+        btnInspectPC7 = (Button) findViewById(R.id.btnInspectPC7);
+        btnAddToCartPC7 = (Button) findViewById(R.id.btnAddtoCartPC7);
+        btnInspectPC8 = (Button) findViewById(R.id.btnInspectPC8);
+        btnAddToCartPC8 = (Button) findViewById(R.id.btnAddtoCartPC8);
+        btnInspectPC9 = (Button) findViewById(R.id.btnInspectPC9);
+        btnAddToCartPC9 = (Button) findViewById(R.id.btnAddtoCartPC9);
 
-        btnMyCart = (Button) findViewById(R.id.btnMyCartScrollingCasual);
-        btnBack = (Button) findViewById(R.id.btnBackScrollingCasual);
+        btnMyCart = (Button) findViewById(R.id.btnMyCartScrollingEnth);
+        btnBack = (Button) findViewById(R.id.btnBackScrollingEnth);
 
-        btnInspectPC4.setOnClickListener(new View.OnClickListener() {
+        btnInspectPC7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //populate ArrayList with Office PC 1's information
+
                 ProductsInfoArrayList.productsInfoArrayList.add(new ProductDescription(
 
-                        3,
-                        "CyberPowerPC - Gamer Xtreme Gaming Desktop",
-                        "CyberPower",
-                        "Intel Core i5-10600KF",
-                        "8 GB RAM DDR4 SDRAM",
-                        "1 TB HDD",
-                        "240 GB SSD",
-                        "NVIDIA GeForce GTX 1660 SUPER",
+                        6,
+                        "CLX Uprising Gaming Desktop",
+                        "CLX",
+                        "AMD Ryzen 7 3000 Series",
+                        "16 GB RAM DDR4 SDRAM",
+                        "960 GB HDD",
+                        "960 GB SSD",
+                        "NVIDIA GeForce RTX 2070",
                         "Windows 10",
-                        1049.99
+                        1939.99
 
                 ));
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("productId", 3);
-                bundle.putInt("whichActivity", 1);
+                bundle.putInt("productId", 6);
+                bundle.putInt("whichActivity", 2);
                 Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
                 inspectScrollActivity.putExtras(bundle);
@@ -79,15 +79,15 @@ public class CasualPCActivity extends AppCompatActivity {
             }
         });
 
-        btnAddToCartPC4.setOnClickListener(new View.OnClickListener() {
+        btnAddToCartPC7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Bundle cartBundle = new Bundle();
-                cartBundle.putInt("productId", 3);
-                cartBundle.putString("productName", "CyberPowerPC - Gamer Xtreme Gaming Desktop");
-                cartBundle.putDouble("productPrice", 1049.99);
-                cartBundle.putInt("whichActivity", 1);
+                cartBundle.putInt("productId", 6);
+                cartBundle.putString("productName", "CLX Uprising Gaming Desktop");
+                cartBundle.putDouble("productPrice", 1939.99);
+                cartBundle.putInt("whichActivity", 2);
 
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
 
@@ -98,29 +98,28 @@ public class CasualPCActivity extends AppCompatActivity {
             }
         });
 
-        btnInspectPC5.setOnClickListener(new View.OnClickListener() {
+        btnInspectPC8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //populate ArrayList with Office PC 2's information
                 ProductsInfoArrayList.productsInfoArrayList.add(new ProductDescription(
 
-                        4,
-                        "CyberPowerPC - Gamer Master Gaming Desktop",
+                        7,
+                        "CyberPowerPC - Gamer Supreme Gaming Desktop",
                         "CyberPower",
-                        "AMD Ryzen 3 3000 Series",
-                        "8 GB RAM DDR4 SDRAM",
-                        "1 TB HDD",
-                        "240 GB SSD",
-                        "AMD Radeon RX 570",
+                        "Intel 11th Generation Core i9 - i9-11900KF",
+                        "16 GB RAM DDR4 SDRAM",
+                        "2 TB HDD",
+                        "500 GB SSD",
+                        "NVIDIA GeForce RTX 3060",
                         "Windows 10",
-                        649.99
+                        1939.99
 
                 ));
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("productId", 4);
-                bundle.putInt("whichActivity", 1);
+                bundle.putInt("productId", 7);
+                bundle.putInt("whichActivity", 2);
 
                 Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
@@ -133,15 +132,15 @@ public class CasualPCActivity extends AppCompatActivity {
             }
         });
 
-        btnAddToCartPC5.setOnClickListener(new View.OnClickListener() {
+        btnAddToCartPC8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Bundle cartBundle = new Bundle();
-                cartBundle.putInt("productId", 4);
-                cartBundle.putString("productName", "CyberPowerPC - Gamer Master Gaming Desktop");
-                cartBundle.putDouble("productPrice", 649.99);
-                cartBundle.putInt("whichActivity", 1);
+                cartBundle.putInt("productId", 7);
+                cartBundle.putString("productName", "CyberPowerPC - Gamer Supreme Gaming Desktop");
+                cartBundle.putDouble("productPrice", 1939.99);
+                cartBundle.putInt("whichActivity", 2);
 
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
 
@@ -152,29 +151,29 @@ public class CasualPCActivity extends AppCompatActivity {
             }
         });
 
-        btnInspectPC6.setOnClickListener(new View.OnClickListener() {
+        btnInspectPC9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //populate ArrayList with Office PC 3's information
                 ProductsInfoArrayList.productsInfoArrayList.add(new ProductDescription(
 
-                        5,
-                        "Dell - G5 5000 Gaming Desktop",
-                        "Dell",
-                        "Intel 10th Generation Core i7-10700F",
-                        "16 GB RAM DDR4 SDRAM",
-                        "512 GB HDD",
-                        "512 GB SSD",
-                        "NVIDIA GeForce GTX 1660 SUPER",
+                        8,
+                        "CLX Revo Gaming Desktop",
+                        "CLX ",
+                        "Intel Core i9 10850K",
+                        "32 GB RAM DDR4 SDRAM",
+                        "4 TB HDD",
+                        "960 GB SSD",
+                        "NVIDIA GeForce RTX 3070",
                         "Windows 10",
-                        1199.99
+                        3149.99
 
                 ));
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("productId", 5);
-                bundle.putInt("whichActivity", 1);
+                bundle.putInt("productId", 8);
+                bundle.putInt("whichActivity", 2);
 
                 Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
@@ -187,15 +186,15 @@ public class CasualPCActivity extends AppCompatActivity {
             }
         });
 
-        btnAddToCartPC6.setOnClickListener(new View.OnClickListener() {
+        btnAddToCartPC9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Bundle cartBundle = new Bundle();
-                cartBundle.putInt("productId", 5);
-                cartBundle.putString("productName", "Dell - G5 5000 Gaming Desktop");
-                cartBundle.putDouble("productPrice", 1199.99);
-                cartBundle.putInt("whichActivity", 1);
+                cartBundle.putInt("productId", 8);
+                cartBundle.putString("productName", "CLX Revo Gaming Desktop");
+                cartBundle.putDouble("productPrice", 3149.99);
+                cartBundle.putInt("whichActivity", 2);
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
 
                 addToCartPopUpActivity.putExtras(cartBundle);
@@ -209,7 +208,7 @@ public class CasualPCActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Bundle activityBundle = new Bundle();
-                activityBundle.putInt("whichActivity", 1);
+                activityBundle.putInt("whichActivity", 2);
                 Intent myCartActivity = new Intent(getApplicationContext(), MyCartActivity.class);
                 myCartActivity.putExtras(activityBundle);
                 startActivity(myCartActivity);

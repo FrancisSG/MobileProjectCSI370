@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProjectCSI370">
-        <activity android:name=".CasualPCActivity"></activity>
+        <activity
+            android:name=".EnthusiastPCActivity"
+            android:label="@string/title_activity_enthusiast_p_c"
+            android:theme="@style/Theme.MobileProjectCSI370.NoActionBar"></activity>
+        <activity
+            android:name=".CasualPCActivity"
+            android:label="@string/title_activity_casual_p_c"
+            android:theme="@style/Theme.MobileProjectCSI370.NoActionBar" />
         <activity android:name=".CheckOutActivity" />
         <activity android:name=".MyCartActivity" />
         <activity

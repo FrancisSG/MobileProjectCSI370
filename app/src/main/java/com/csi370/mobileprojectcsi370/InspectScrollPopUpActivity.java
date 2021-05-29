@@ -69,11 +69,9 @@ public class InspectScrollPopUpActivity extends AppCompatActivity {
         txtVProductGraphics = (TextView) findViewById(R.id.txtVProductGraphics);
         txtVProductOS = (TextView) findViewById(R.id.txtVProductOs);
 
-
         Bundle bundle = getIntent().getExtras();
         productId = bundle.getInt("productId", 0);
 
-        //Populating fields
         //Populating fields
         for(ProductDescription product : ProductsInfoArrayList.productsInfoArrayList) {
             if(product.getProductId() == productId) {
@@ -94,12 +92,33 @@ public class InspectScrollPopUpActivity extends AppCompatActivity {
         }
 
 
+        Bundle backBundle = getIntent().getExtras();
+        int whichActivity = backBundle.getInt("whichActivity", 0);
+
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
-                Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
-                startActivity(officePCActivity);
-                finish();
+
+                switch(whichActivity) {
+                    case 0:
+                        Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
+                        startActivity(officePCActivity);
+                        finish();
+                        break;
+                    case 1:
+                        Intent casualPCActivity = new Intent(getApplicationContext(), CasualPCActivity.class);
+                        startActivity(casualPCActivity);
+                        finish();
+                        break;
+                    case 2:
+                        Intent enthusiastPCActivity = new Intent(getApplicationContext(), EnthusiastPCActivity.class);
+                        startActivity(enthusiastPCActivity);
+                        finish();
+                        break;
+                }
+
+
             }
         });
 

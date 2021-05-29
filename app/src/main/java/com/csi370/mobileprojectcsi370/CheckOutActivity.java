@@ -77,6 +77,12 @@ public class CheckOutActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myCartActivity = new Intent(getApplicationContext(), MyCartActivity.class);
+                Bundle whichActivityBundle = new Bundle();
+                Bundle whichActivityBundleFromMyCart = getIntent().getExtras();
+
+                whichActivityBundle.putInt("whichActivity",whichActivityBundleFromMyCart.getInt("whichActivity"));
+
+                myCartActivity.putExtras(whichActivityBundle);
                 startActivity(myCartActivity);
                 finish();
             }

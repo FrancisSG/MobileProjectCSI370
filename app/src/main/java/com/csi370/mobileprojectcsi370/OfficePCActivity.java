@@ -71,7 +71,7 @@ public class OfficePCActivity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("productId", 0);
-
+                bundle.putInt("whichActivity", 0);
                 Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
                 inspectScrollActivity.putExtras(bundle);
@@ -89,6 +89,7 @@ public class OfficePCActivity extends AppCompatActivity {
                 cartBundle.putInt("productId", 0);
                 cartBundle.putString("productName", "MSI - Desktop Computer, Mini-Desktop");
                 cartBundle.putDouble("productPrice", 549.99);
+                cartBundle.putInt("whichActivity", 0);
 
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
 
@@ -121,6 +122,7 @@ public class OfficePCActivity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("productId", 1);
+                bundle.putInt("whichActivity", 0);
 
                 Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
@@ -141,6 +143,7 @@ public class OfficePCActivity extends AppCompatActivity {
                 cartBundle.putInt("productId", 1);
                 cartBundle.putString("productName", "Dell OptiPlex OP3080SFF01KJX Desktop Computer");
                 cartBundle.putDouble("productPrice", 619.99);
+                cartBundle.putInt("whichActivity", 0);
 
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
 
@@ -173,6 +176,7 @@ public class OfficePCActivity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("productId", 2);
+                bundle.putInt("whichActivity", 0);
 
                 Intent inspectScrollActivity = new Intent(getApplicationContext(), InspectScrollPopUpActivity.class);
 
@@ -193,7 +197,7 @@ public class OfficePCActivity extends AppCompatActivity {
                 cartBundle.putInt("productId", 2);
                 cartBundle.putString("productName", "HP Default Desktop");
                 cartBundle.putDouble("productPrice", 569.99);
-
+                cartBundle.putInt("whichActivity", 0);
                 Intent addToCartPopUpActivity = new Intent(getApplicationContext(), AddToCartPopUpActivity.class);
 
                 addToCartPopUpActivity.putExtras(cartBundle);
@@ -207,7 +211,11 @@ public class OfficePCActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Bundle activityBundle = new Bundle();
+                activityBundle.putInt("whichActivity", 0);
+
                 Intent myCartActivity = new Intent(getApplicationContext(), MyCartActivity.class);
+                myCartActivity.putExtras(activityBundle);
                 startActivity(myCartActivity);
                 finish();
             }

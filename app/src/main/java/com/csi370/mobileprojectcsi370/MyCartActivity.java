@@ -37,12 +37,33 @@ public class MyCartActivity extends AppCompatActivity {
 
         updateCart(text, grandTotal);
 
+        Bundle backBundle = getIntent().getExtras();
+        int whichActivity = backBundle.getInt("whichActivity", 0);
+
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
-                Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
-                startActivity(officePCActivity);
-                finish();
+
+                switch(whichActivity) {
+                    case 0:
+                        Intent officePCActivity = new Intent(getApplicationContext(), OfficePCActivity.class);
+                        startActivity(officePCActivity);
+                        finish();
+                        break;
+                    case 1:
+                        Intent casualPCActivity = new Intent(getApplicationContext(), CasualPCActivity.class);
+                        startActivity(casualPCActivity);
+                        finish();
+                        break;
+                    case 2:
+                        Intent enthusiastPCActivity = new Intent(getApplicationContext(), EnthusiastPCActivity.class);
+                        startActivity(enthusiastPCActivity);
+                        finish();
+                        break;
+                }
+
+
             }
         });
 
@@ -69,6 +90,7 @@ public class MyCartActivity extends AppCompatActivity {
 
                     Bundle totalPriceBundle = new Bundle();
                     totalPriceBundle.putDouble("grandTotal", bGrandTotal);
+                    totalPriceBundle.putInt("whichActivity", whichActivity);
                     Intent checkOutActivity = new Intent(getApplicationContext(), CheckOutActivity.class);
                     checkOutActivity.putExtras(totalPriceBundle);
                     startActivity(checkOutActivity);
