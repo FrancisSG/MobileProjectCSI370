@@ -4,6 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/viciousstancebgcolor"
     tools:context=".ResetPassActivity">
+
+    <EditText
+        android:id="@+id/edtEmailReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterEmail"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVTitleReset" />
+
+    <TextView
+        android:id="@+id/txtVTitleReset"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/resetPass"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnResetPasswordReset"
+        android:layout_width="174dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/ResetPassword"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/dark1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtReenterPasswordReset" />
+
+    <Button
+        android:id="@+id/btnBackReset"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/dark1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnResetPasswordReset" />
+
+    <EditText
+        android:id="@+id/edtReenterPasswordReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterNewPasswordAgain"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordReset" />
+
+    <EditText
+        android:id="@+id/edtPasswordReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterNewPassword"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailReset" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

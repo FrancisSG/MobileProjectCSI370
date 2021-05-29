@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <Button
-        android:id="@+id/btnRegisterLogin"
+        android:id="@+id/btnLoginLogin"
         android:layout_width="222dp"
         android:layout_height="71dp"
         android:layout_marginTop="37dp"
@@ -39,16 +39,16 @@
         android:id="@+id/txtVResetText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginLeft="69dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
         android:text="@string/forgotPassText"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegisterLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginLogin" />
 
     <Button
         android:id="@+id/btnBackLogin"
@@ -67,8 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="145dp"
-        android:ems="10"
+        android:autofillHints=""
 
+        android:ems="10"
         android:gravity="center"
         android:hint="@string/enterEmail"
         android:inputType="textEmailAddress"
@@ -76,14 +77,14 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtPasswordLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="center"
         android:hint="@string/enterPassword"
@@ -93,7 +94,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailLogin"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

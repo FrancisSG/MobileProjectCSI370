@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CasualPCActivity"
+    tools:showIn="@layout/activity_casual_p_c">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cleanmirror">
+
+        <TextView
+            android:id="@+id/txtVCasualFlavourText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/casualFlavourText"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVCasualPCsTitle" />
+
+        <TextView
+            android:id="@+id/txtVCasualPCsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/casualPCs"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVPC1TitleCasual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="131dp"
+            android:gravity="center"
+            android:text="@string/pc5"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgCasualPc1"
+            android:layout_width="215dp"
+            android:layout_height="335dp"
+            android:layout_marginTop="160dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casual2" />
+
+        <ImageView
+            android:id="@+id/imgCasualPc2"
+            android:layout_width="265dp"
+            android:layout_height="491dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginLeft="96dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginRight="97dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casual1" />
+
+        <TextView
+            android:id="@+id/txtVCasualPc1Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="792dp"
+            android:text="@string/casualPc2Price"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnInspectPC4"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="848dp"
+            android:text="@string/inspect"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddtoCartPC4"
+            android:layout_width="193dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="892dp"
+            android:text="@string/addToCart"
+            app:backgroundTint="@color/weirdBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgcasualPc3"
+            android:layout_width="301dp"
+            android:layout_height="435dp"
+            android:layout_marginTop="990dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casual4" />
+
+        <ImageView
+            android:id="@+id/imgcasualPc4"
+            android:layout_width="230dp"
+            android:layout_height="451dp"
+            android:layout_marginTop="1280dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casual5" />
+
+        <TextView
+            android:id="@+id/txtVPC2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="980dp"
+            android:gravity="center"
+            android:text="@string/pc4"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVcasualPc2Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1635dp"
+            android:text="@string/casualPc1Price"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnInspectPC5"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/inspect"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVcasualPc2Price" />
+
+        <Button
+            android:id="@+id/btnAddtoCartPC5"
+            android:layout_width="193dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="1745dp"
+            android:text="@string/addToCart"
+            app:backgroundTint="@color/weirdBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVPC3Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1816dp"
+            android:text="@string/pc6"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgcasualPc5"
+            android:layout_width="377dp"
+            android:layout_height="501dp"
+            android:layout_marginTop="1760dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casual7" />
+
+        <ImageView
+            android:id="@+id/imgcasualPc6"
+            android:layout_width="298dp"
+            android:layout_height="511dp"
+            android:layout_marginTop="1992dp"
+            android:contentDescription="@string/imgDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casual6" />
+
+        <Button
+            android:id="@+id/btnAddtoCartPC6"
+            android:layout_width="193dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="2472dp"
+            android:text="@string/addToCart"
+            app:backgroundTint="@color/weirdBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnInspectPC6"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="748dp"
+            android:text="@string/inspect"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVcasualPc2Price" />
+
+        <TextView
+            android:id="@+id/txtVcasualPc3Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2376dp"
+            android:text="@string/casualPc3Price"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMyCartScrollingCasual"
+            android:layout_width="167dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2540dp"
+            android:text="@string/myCart"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnBackScrollingCasual"
+            android:layout_width="133dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/back"
+            app:backgroundTint="@color/lightBlue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMyCartScrollingCasual" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
