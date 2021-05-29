@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class ResetPassActivity extends AppCompatActivity {
 
-    Button btnReset;
+    Button btnReset, btnBack;
     EditText edtEmail, edtNewPassword, edtRepeatedPassword;
 
 
@@ -23,7 +23,7 @@ public class ResetPassActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reset_pass);
 
         btnReset = (Button) findViewById(R.id.btnResetPasswordReset);
-
+        btnBack = (Button) findViewById(R.id.btnBackReset);
         edtEmail = (EditText) findViewById(R.id.edtEmailReset);
         edtNewPassword = (EditText) findViewById(R.id.edtPasswordReset);
         edtRepeatedPassword = (EditText) findViewById(R.id.edtReenterPasswordReset);
@@ -63,8 +63,15 @@ public class ResetPassActivity extends AppCompatActivity {
             }
         });
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent loginActivity = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(loginActivity);
+                finish();
+            }
+        });
 
-    }
+}
 
     private boolean checkIfEmailExists()
     {
