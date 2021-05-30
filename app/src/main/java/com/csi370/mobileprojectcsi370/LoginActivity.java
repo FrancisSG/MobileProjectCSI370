@@ -16,8 +16,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     EditText edtEmail, edtPassword;
-
     Button btnLogin, btnReset, btnBack;
+    public static int userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,8 @@ public class LoginActivity extends AppCompatActivity {
 
                             //loggedInUserId is stored in AppUserId.java
                             AppUserDb.loggedInUserId = getCurrentLoggedInUserId();
-
+                            userID = getCurrentLoggedInUserId();
+                            
                             // User is redirected to CategoriesActivity
                             Intent categoriesActivity = new Intent(getApplicationContext(), CategoriesActivity.class);
                             startActivity(categoriesActivity);

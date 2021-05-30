@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class CheckOutActivity extends AppCompatActivity {
 
     boolean isGuest = true;
@@ -18,6 +20,8 @@ public class CheckOutActivity extends AppCompatActivity {
     TextView txtVTotalPrice, txtVForGuest;
     EditText edtAddress, edtPhoneNumber;
     Button btnConfirmPurchase,btnBack;
+
+    SQLDatabase database;
 
 
     @Override
@@ -36,6 +40,10 @@ public class CheckOutActivity extends AppCompatActivity {
         btnConfirmPurchase = (Button) findViewById(R.id.btnConfirmPurchase);
         btnBack = (Button) findViewById(R.id.btnBackCheckout);
 
+        database = new SQLDatabase(getApplicationContext());
+//        ArrayList<Purchase> Pur_List = new ArrayList<Purchase>();
+//        Pur_List.get(LoginActivity.userID);
+
         Bundle bundle = getIntent().getExtras();
         txtVTotalPrice.setText("$" + bundle.getDouble("grandTotal", 0.0));
 
@@ -48,10 +56,15 @@ public class CheckOutActivity extends AppCompatActivity {
         btnConfirmPurchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(isGuest) {
+                    // If EditText are empty
                     if(TextUtils.isEmpty(edtAddress.getText().toString()) && TextUtils.isEmpty(edtPhoneNumber.getText().toString())) {
                         Toast.makeText(getApplicationContext(), "Fill in the field(s)!", Toast.LENGTH_SHORT).show();
-                    } else {
+                    }
+                    // If EditText are not empty
+                    else {
+                        database.insertProducts(Cart.cart.get(LoginActivity.userID));
                         Toast.makeText(getApplicationContext(), "Order is processing!", Toast.LENGTH_SHORT).show();
 
                         txtVTotalPrice.setText("Thank you for your purchase!");
@@ -59,6 +72,9 @@ public class CheckOutActivity extends AppCompatActivity {
                         //Empty Cart
                         MainActivity.purchaseID = 0;
                         Cart.cart.clear();
+                        Intent i = new Intent(getApplicationContext(), CategoriesActivity.class);
+                        startActivity(i);
+                        finish();
                     }
                 }
                 else {
@@ -69,6 +85,9 @@ public class CheckOutActivity extends AppCompatActivity {
                     //Empty Cart
                     MainActivity.purchaseID = 0;
                     Cart.cart.clear();
+                    Intent i = new Intent(getApplicationContext(), CategoriesActivity.class);
+                    startActivity(i);
+                    finish();
                 }
             }
         });
