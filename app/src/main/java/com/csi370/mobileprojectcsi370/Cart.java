@@ -7,6 +7,4 @@ public class Cart {
     //ArrayList full of purchases
     public static ArrayList<Purchase> cart = new ArrayList<>();
 
-    
-
 }
