@@ -22,10 +22,15 @@ public class RegisterActivity extends AppCompatActivity {
     Button btnRegister, btnBack;
     EditText edtEmail, edtPassword, edtAddress, edtPhoneNumber;
 
+    SQLDatabase database;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        database = new SQLDatabase(getApplicationContext());
 
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnBack = (Button) findViewById(R.id.btnBackRegister);
@@ -64,10 +69,13 @@ public class RegisterActivity extends AppCompatActivity {
                     //Add AppUser ArrayList into sharedPreference
                     PrefConfig.writeArrayListInPref(getApplicationContext(), AppUserDb.UsersArrayList);
 
+
                     Toast.makeText(getApplicationContext(), "Registered Successfully!", Toast.LENGTH_SHORT).show();
 
                     hasBeenUsed = true;
                     saveData();
+
+
 
                     Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(mainActivity);
@@ -78,6 +86,13 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 } else {
                     Toast.makeText(getApplicationContext(), "Fill in the empty field(s)!", Toast.LENGTH_SHORT).show();
+                }
+
+                // Storing the user inside the database
+                for(AppUser user : AppUserDb.UsersArrayList) {
+                    if(user.getId() == AppUserDb.loggedInUserId) {
+                        database.insertUser(user);
+                    }
                 }
 
             }
