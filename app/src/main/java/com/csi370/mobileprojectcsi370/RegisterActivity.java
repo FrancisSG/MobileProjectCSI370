@@ -51,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
                 ) {
                 if(!checkIfEmailExists()){
                     AppUserDb.loggedInUserId = PrefConfig.arraySize + 1;
-                    int test = AppUserDb.loggedInUserId;
+
                     AppUserDb.UsersArrayList.add(
                             new AppUser(
                                     AppUserDb.loggedInUserId,
